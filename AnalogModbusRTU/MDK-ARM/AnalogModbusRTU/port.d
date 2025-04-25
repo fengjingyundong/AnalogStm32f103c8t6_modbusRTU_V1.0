@@ -1,0 +1,12 @@
+analogmodbusrtu\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c
+analogmodbusrtu\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+analogmodbusrtu\port.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+analogmodbusrtu\port.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+analogmodbusrtu\port.o: ../Core/Inc/FreeRTOSConfig.h
+analogmodbusrtu\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+analogmodbusrtu\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+analogmodbusrtu\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+analogmodbusrtu\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+analogmodbusrtu\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+analogmodbusrtu\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+analogmodbusrtu\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

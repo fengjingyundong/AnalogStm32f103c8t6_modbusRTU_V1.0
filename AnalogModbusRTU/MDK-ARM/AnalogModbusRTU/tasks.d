@@ -1,0 +1,16 @@
+analogmodbusrtu\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/tasks.c
+analogmodbusrtu\tasks.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+analogmodbusrtu\tasks.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+analogmodbusrtu\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+analogmodbusrtu\tasks.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+analogmodbusrtu\tasks.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+analogmodbusrtu\tasks.o: ../Core/Inc/FreeRTOSConfig.h
+analogmodbusrtu\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+analogmodbusrtu\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+analogmodbusrtu\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+analogmodbusrtu\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+analogmodbusrtu\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+analogmodbusrtu\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+analogmodbusrtu\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+analogmodbusrtu\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+analogmodbusrtu\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/stack_macros.h

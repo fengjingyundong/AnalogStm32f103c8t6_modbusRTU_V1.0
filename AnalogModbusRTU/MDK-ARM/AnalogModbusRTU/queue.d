@@ -1,0 +1,15 @@
+analogmodbusrtu\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/queue.c
+analogmodbusrtu\queue.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+analogmodbusrtu\queue.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+analogmodbusrtu\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+analogmodbusrtu\queue.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+analogmodbusrtu\queue.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+analogmodbusrtu\queue.o: ../Core/Inc/FreeRTOSConfig.h
+analogmodbusrtu\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+analogmodbusrtu\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+analogmodbusrtu\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+analogmodbusrtu\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+analogmodbusrtu\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+analogmodbusrtu\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+analogmodbusrtu\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+analogmodbusrtu\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h

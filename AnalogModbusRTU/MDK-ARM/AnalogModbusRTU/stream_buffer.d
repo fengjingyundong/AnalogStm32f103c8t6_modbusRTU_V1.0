@@ -1,0 +1,14 @@
+analogmodbusrtu\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
+analogmodbusrtu\stream_buffer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+analogmodbusrtu\stream_buffer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+analogmodbusrtu\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+analogmodbusrtu\stream_buffer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+analogmodbusrtu\stream_buffer.o: ../Core/Inc/FreeRTOSConfig.h
+analogmodbusrtu\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+analogmodbusrtu\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+analogmodbusrtu\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+analogmodbusrtu\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+analogmodbusrtu\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+analogmodbusrtu\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+analogmodbusrtu\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+analogmodbusrtu\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h
