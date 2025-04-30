@@ -25,6 +25,7 @@ analogmodbusrtu\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex
 analogmodbusrtu\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h
 analogmodbusrtu\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 analogmodbusrtu\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
+analogmodbusrtu\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_iwdg.h
 analogmodbusrtu\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 analogmodbusrtu\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
 analogmodbusrtu\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h

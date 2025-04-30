@@ -33,6 +33,7 @@ analogmodbusrtu\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dm
 analogmodbusrtu\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h
 analogmodbusrtu\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 analogmodbusrtu\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
+analogmodbusrtu\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_iwdg.h
 analogmodbusrtu\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 analogmodbusrtu\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
 analogmodbusrtu\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
@@ -41,3 +42,15 @@ analogmodbusrtu\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_ua
 analogmodbusrtu\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h
 analogmodbusrtu\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 analogmodbusrtu\freertos.o: ../Core/Inc/gpio.h
+analogmodbusrtu\freertos.o: ../Core/Inc/usart.h
+analogmodbusrtu\freertos.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+analogmodbusrtu\freertos.o: ../Core/Inc/tim.h
+analogmodbusrtu\freertos.o: ../Core/Inc/spi.h
+analogmodbusrtu\freertos.o: ../Core/Inc/iwdg.h
+analogmodbusrtu\freertos.o: ../Drivers/BSP/TLC2543/tlc2543.h
+analogmodbusrtu\freertos.o: ../Drivers/BSP/MODBUS/modbus.h
+analogmodbusrtu\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+analogmodbusrtu\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
+analogmodbusrtu\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+analogmodbusrtu\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+analogmodbusrtu\freertos.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

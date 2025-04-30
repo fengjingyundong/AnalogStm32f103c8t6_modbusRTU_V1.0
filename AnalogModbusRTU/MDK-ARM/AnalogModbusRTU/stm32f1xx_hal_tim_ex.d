@@ -23,6 +23,7 @@ analogmodbusrtu\stm32f1xx_hal_tim_ex.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm3
 analogmodbusrtu\stm32f1xx_hal_tim_ex.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h
 analogmodbusrtu\stm32f1xx_hal_tim_ex.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 analogmodbusrtu\stm32f1xx_hal_tim_ex.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
+analogmodbusrtu\stm32f1xx_hal_tim_ex.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_iwdg.h
 analogmodbusrtu\stm32f1xx_hal_tim_ex.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 analogmodbusrtu\stm32f1xx_hal_tim_ex.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
 analogmodbusrtu\stm32f1xx_hal_tim_ex.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h

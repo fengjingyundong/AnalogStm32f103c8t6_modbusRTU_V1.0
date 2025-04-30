@@ -61,8 +61,8 @@ void MX_GPIO_Init(void)
 
   /*Configure GPIO pin : TLC_EOC_Pin */
   GPIO_InitStruct.Pin = TLC_EOC_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(TLC_EOC_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : RUN_LED_Pin */
@@ -71,6 +71,10 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_MEDIUM;
   HAL_GPIO_Init(RUN_LED_GPIO_Port, &GPIO_InitStruct);
+
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI1_IRQn, 7, 0);
+  HAL_NVIC_EnableIRQ(EXTI1_IRQn);
 
 }
 

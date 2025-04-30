@@ -1,26 +1,115 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * @file    usart.c
-  * @brief   This file provides code for the configuration
-  *          of the USART instances.
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2025 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
+ ******************************************************************************
+ * @file    usart.c
+ * @brief   This file provides code for the configuration
+ *          of the USART instances.
+ ******************************************************************************
+ * @attention
+ *
+ * Copyright (c) 2025 STMicroelectronics.
+ * All rights reserved.
+ *
+ * This software is licensed under terms that can be found in the LICENSE file
+ * in the root directory of this software component.
+ * If no LICENSE file comes with this software, it is provided AS-IS.
+ *
+ ******************************************************************************
+ */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "usart.h"
 
 /* USER CODE BEGIN 0 */
+#include "stdarg.h" //包含需要的头文件
+#include "string.h"
+
+#include "cmsis_os.h"
+
+__align(8) U2Rx_Struct U2Rx_SBuff; /* 串口2 接收缓冲区 */
+__align(8) U2Tx_Struct U2Tx_SBuff; /* 串口2 发送缓存区 */
+
+/* 加入以下代码, 支持printf函数, 而不需要选择use MicroLIB */
+
+#if 1
+#if (__ARMCC_VERSION >= 6010050)           /* 使用AC6编译器时 */
+__asm(".global __use_no_semihosting\n\t"); /* 声明不使用半主机模式 */
+__asm(".global __ARM_use_no_argv \n\t");   /* AC6下需要声明main函数为无参数格式，否则部分例程可能出现半主机模式 */
+
+#else
+/* 使用AC5编译器时, 要在这里定义__FILE 和 不使用半主机模式 */
+#pragma import(__use_no_semihosting)
+
+struct __FILE
+{
+  int handle;
+  /* Whatever you require here. If the only file you are using is */
+  /* standard output using printf() for debugging, no file handling */
+  /* is required. */
+};
+
+#endif
+
+/* 不使用半主机模式，至少需要重定义_ttywrch\_sys_exit\_sys_command_string函数,以同时兼容AC6和AC5模式 */
+int _ttywrch(int ch)
+{
+  ch = ch;
+  return ch;
+}
+
+/* 定义_sys_exit()以避免使用半主机模式 */
+void _sys_exit(int x)
+{
+  x = x;
+}
+
+char *_sys_command_string(char *cmd, int len)
+{
+  return NULL;
+}
+
+/* FILE 在 stdio.h里面定义. */
+FILE __stdout;
+
+/* 重定义fputc函数, printf函数最终会通过调用fputc输出字符串到串口 */
+int fputc(int ch, FILE *f)
+{
+  while ((USART1->SR & 0X40) == 0)
+    ; /* 等待上一个字符发送完成 */
+
+  USART1->DR = (uint8_t)ch; /* 将要发送的字符 ch 写入到DR寄存器 */
+  return ch;
+}
+
+// 串口2
+void u2_printf(char *fmt, ...)
+{
+  unsigned int i, length;
+
+  va_list ap;
+
+  // va_list 可变参数列表，存参数地址
+  va_start(ap, fmt); // 获取可变参数地址 fmt地址赋给ap
+
+  vsprintf((char *)U2Tx_SBuff.buf, fmt, ap); /*使用参数列表发送格式化输出到字符串,
+   函数功能将可变参数格式化输出到一个字符数组
+   */
+  // fmt中内容赋给Usart3_TxBuff，
+  va_end(ap); // 清空参数列表
+  //
+
+  length = strlen((const char *)U2Tx_SBuff.buf);
+  while ((USART2->SR & 0X40) == 0)
+    ;
+  for (i = 0; i < length; i++)
+  {
+    USART2->DR = U2Tx_SBuff.buf[i];
+    while ((USART2->SR & 0X40) == 0)
+      ;
+  }
+}
+
+#endif
 
 /* USER CODE END 0 */
 
@@ -217,6 +306,8 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     HAL_NVIC_SetPriority(USART2_IRQn, 5, 0);
     HAL_NVIC_EnableIRQ(USART2_IRQn);
   /* USER CODE BEGIN USART2_MspInit 1 */
+
+    __HAL_UART_ENABLE_IT(&huart2, UART_IT_IDLE); // 使能IDLE中断
 
   /* USER CODE END USART2_MspInit 1 */
   }

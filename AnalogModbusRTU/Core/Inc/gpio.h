@@ -39,6 +39,17 @@ extern "C" {
   {                                                                                                                                          \
     x ? HAL_GPIO_WritePin(RUN_LED_GPIO_Port, RUN_LED_Pin, GPIO_PIN_SET) : HAL_GPIO_WritePin(RUN_LED_GPIO_Port, RUN_LED_Pin, GPIO_PIN_RESET); \
   } while (0) /* LED0 = RED */
+
+/* TLC_CS 端口定义 */
+#define TLC_CS(x)                                                                                                                        \
+  do                                                                                                                                     \
+  {                                                                                                                                      \
+    x ? HAL_GPIO_WritePin(TLC_CS_GPIO_Port, TLC_CS_Pin, GPIO_PIN_SET) : HAL_GPIO_WritePin(TLC_CS_GPIO_Port, TLC_CS_Pin, GPIO_PIN_RESET); \
+  } while (0)
+
+/* TLC_EOC */
+#define TLC_EOC HAL_GPIO_ReadPin(TLC_EOC_GPIO_Port, TLC_EOC_Pin) /* 读取KEY_L1引脚 */
+
 /* USER CODE END Private defines */
 
 void MX_GPIO_Init(void);

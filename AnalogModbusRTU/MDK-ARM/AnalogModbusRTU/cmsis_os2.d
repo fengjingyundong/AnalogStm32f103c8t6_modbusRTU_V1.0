@@ -40,6 +40,7 @@ analogmodbusrtu\cmsis_os2.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_d
 analogmodbusrtu\cmsis_os2.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h
 analogmodbusrtu\cmsis_os2.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 analogmodbusrtu\cmsis_os2.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
+analogmodbusrtu\cmsis_os2.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_iwdg.h
 analogmodbusrtu\cmsis_os2.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 analogmodbusrtu\cmsis_os2.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
 analogmodbusrtu\cmsis_os2.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h

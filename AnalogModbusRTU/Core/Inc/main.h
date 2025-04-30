@@ -71,6 +71,7 @@ void Error_Handler(void);
 #define TLC_MOSI_GPIO_Port GPIOA
 #define TLC_EOC_Pin GPIO_PIN_1
 #define TLC_EOC_GPIO_Port GPIOB
+#define TLC_EOC_EXTI_IRQn EXTI1_IRQn
 #define RUN_LED_Pin GPIO_PIN_8
 #define RUN_LED_GPIO_Port GPIOA
 #define RS232_TX_Pin GPIO_PIN_9

@@ -1,26 +1,40 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * @file    spi.c
-  * @brief   This file provides code for the configuration
-  *          of the SPI instances.
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2025 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
+ ******************************************************************************
+ * @file    spi.c
+ * @brief   This file provides code for the configuration
+ *          of the SPI instances.
+ ******************************************************************************
+ * @attention
+ *
+ * Copyright (c) 2025 STMicroelectronics.
+ * All rights reserved.
+ *
+ * This software is licensed under terms that can be found in the LICENSE file
+ * in the root directory of this software component.
+ * If no LICENSE file comes with this software, it is provided AS-IS.
+ *
+ ******************************************************************************
+ */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "spi.h"
 
 /* USER CODE BEGIN 0 */
+#include "gpio.h"
+#include "usart.h"
+#include "tlc2543.h"
+
+#include "FreeRTOS.h"
+#include "queue.h"
+#include "task.h"
+#include "semphr.h"
+#include "event_groups.h"
+#include "cmsis_os.h"
+
+#include "string.h"
+
+extern osMessageQueueId_t ADC_QueueHandle; /* Definitions for ADC_QueueHandle */
 
 /* USER CODE END 0 */
 
@@ -162,5 +176,52 @@ void HAL_SPI_MspDeInit(SPI_HandleTypeDef* spiHandle)
 }
 
 /* USER CODE BEGIN 1 */
+
+/* SPI1 传输完成 回调函数 */
+void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi)
+{
+  UBaseType_t uxSPI1_TxRxFinshed_InterruptStatus;
+  BaseType_t xHigherPriorityTaskWoken;
+  BaseType_t err;
+  // static uint8_t str[50] = {0x00};
+  xHigherPriorityTaskWoken = pdFALSE;
+
+  if (hspi == &hspi1)
+  {
+    TLC_CS(1); // 置高片选信号，结束通讯
+
+    if (Atomic_Channel_Marker >= 1)
+    {
+      ADC_Value[Atomic_Channel_Marker - 1] = (RxBuffer[0] << 8) | RxBuffer[1];
+      ADC_Value[Atomic_Channel_Marker - 1] = ADC_Value[Atomic_Channel_Marker - 1] >> 4;
+    }
+
+    /* 进入临界区 */
+    uxSPI1_TxRxFinshed_InterruptStatus = taskENTER_CRITICAL_FROM_ISR();
+
+    /* 一个转换周期结束 */
+    if (Atomic_Channel_Marker >= ADC_NUM - 1)
+    {
+      /* 发送ADC 数据队列 */
+      err = xQueueOverwriteFromISR(ADC_QueueHandle, &ADC_Value, &xHigherPriorityTaskWoken);
+      if (err != pdTRUE)
+        printf("ADC_QueueHandle OverwriteISR False !\r\n");
+      // sprintf((char *)str, "%d,%d,%d,%d,%d,%d,%d,%d,%d,%d\r\n", ADC_Value[0], ADC_Value[1],
+      //         ADC_Value[2], ADC_Value[3], ADC_Value[4], ADC_Value[5], ADC_Value[6],
+      //         ADC_Value[7], ADC_Value[8], ADC_Value[9]);
+
+      // HAL_UART_Transmit_DMA(&huart1, str, strlen((char *)str));
+    }
+
+    /* 退出临界区 */
+    taskEXIT_CRITICAL_FROM_ISR(uxSPI1_TxRxFinshed_InterruptStatus);
+
+    /* 执行上下文切换 */
+    if (xHigherPriorityTaskWoken == pdTRUE)
+    {
+      portYIELD_FROM_ISR(xHigherPriorityTaskWoken); /* 执行上下文切换 */
+    }
+  }
+}
 
 /* USER CODE END 1 */

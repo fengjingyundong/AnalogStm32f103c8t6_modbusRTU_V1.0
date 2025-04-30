@@ -4,7 +4,9 @@
 "analogmodbusrtu\gpio.o"
 "analogmodbusrtu\freertos.o"
 "analogmodbusrtu\dma.o"
+"analogmodbusrtu\iwdg.o"
 "analogmodbusrtu\spi.o"
+"analogmodbusrtu\tim.o"
 "analogmodbusrtu\usart.o"
 "analogmodbusrtu\stm32f1xx_it.o"
 "analogmodbusrtu\stm32f1xx_hal_msp.o"
@@ -22,6 +24,7 @@
 "analogmodbusrtu\stm32f1xx_hal_flash.o"
 "analogmodbusrtu\stm32f1xx_hal_flash_ex.o"
 "analogmodbusrtu\stm32f1xx_hal_exti.o"
+"analogmodbusrtu\stm32f1xx_hal_iwdg.o"
 "analogmodbusrtu\stm32f1xx_hal_spi.o"
 "analogmodbusrtu\stm32f1xx_hal_uart.o"
 "analogmodbusrtu\system_stm32f1xx.o"
@@ -35,6 +38,9 @@
 "analogmodbusrtu\cmsis_os2.o"
 "analogmodbusrtu\heap_4.o"
 "analogmodbusrtu\port.o"
+"analogmodbusrtu\crc.o"
+"analogmodbusrtu\tlc2543.o"
+"analogmodbusrtu\modbus.o"
 --strict --scatter "AnalogModbusRTU\AnalogModbusRTU.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

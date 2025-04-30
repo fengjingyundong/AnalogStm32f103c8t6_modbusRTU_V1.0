@@ -24,6 +24,7 @@ analogmodbusrtu\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex
 analogmodbusrtu\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h
 analogmodbusrtu\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 analogmodbusrtu\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
+analogmodbusrtu\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_iwdg.h
 analogmodbusrtu\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 analogmodbusrtu\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
 analogmodbusrtu\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
@@ -41,6 +42,9 @@ analogmodbusrtu\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.
 analogmodbusrtu\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 analogmodbusrtu\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 analogmodbusrtu\main.o: ../Core/Inc/dma.h
+analogmodbusrtu\main.o: ../Core/Inc/iwdg.h
 analogmodbusrtu\main.o: ../Core/Inc/spi.h
+analogmodbusrtu\main.o: ../Core/Inc/tim.h
 analogmodbusrtu\main.o: ../Core/Inc/usart.h
+analogmodbusrtu\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 analogmodbusrtu\main.o: ../Core/Inc/gpio.h
