@@ -520,6 +520,28 @@ extern UART_HandleTypeDef huart2;
 #define USART2_TXBUFF_SIZE 50 // 定义串口2 发送缓冲区大小 50字节
 #define USART2_RXBUFF_SIZE 50 // 定义串口2 接收缓冲区大小 50字节
 
+/* USER CODE END Includes */
+
+extern UART_HandleTypeDef huart1;
+
+extern UART_HandleTypeDef huart2;
+
+/* USER CODE BEGIN Private defines */
+
+#define USART2_TXBUFF_SIZE 50 // 定义串口2 发送缓冲区大小 50字节
+#define USART2_RXBUFF_SIZE 50 // 定义串口2 接收缓冲区大小 50字节
+
+/* USER CODE END Includes */
+
+extern UART_HandleTypeDef huart1;
+
+extern UART_HandleTypeDef huart2;
+
+/* USER CODE BEGIN Private defines */
+
+#define USART2_TXBUFF_SIZE 50 // 定义串口2 发送缓冲区大小 50字节
+#define USART2_RXBUFF_SIZE 50 // 定义串口2 接收缓冲区大小 50字节
+
   /*************************************************************************/
   /* USART2 串口数据接收结构体 */
   typedef struct

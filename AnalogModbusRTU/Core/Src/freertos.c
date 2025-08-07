@@ -68,61 +68,65 @@ static QueueSetHandle_t QueueSet_Handle; /* 声明队列集句柄 */
 /* Definitions for defaultTask */
 osThreadId_t defaultTaskHandle;
 const osThreadAttr_t defaultTask_attributes = {
-    .name = "defaultTask",
-    .stack_size = 128 * 4,
-    .priority = (osPriority_t)osPriorityNormal,
+  .name = "defaultTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityNormal,
 };
 /* Definitions for RUNTask */
 osThreadId_t RUNTaskHandle;
 const osThreadAttr_t RUNTask_attributes = {
-    .name = "RUNTask",
-    .stack_size = 128 * 4,
-    .priority = (osPriority_t)osPriorityLow,
+  .name = "RUNTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
 };
 /* Definitions for ADCReadTask */
 osThreadId_t ADCReadTaskHandle;
 const osThreadAttr_t ADCReadTask_attributes = {
-    .name = "ADCReadTask",
-    .stack_size = 256 * 4,
-    .priority = (osPriority_t)osPriorityNormal,
+  .name = "ADCReadTask",
+  .stack_size = 256 * 4,
+  .priority = (osPriority_t) osPriorityAboveNormal,
 };
 /* Definitions for IWDGRefreshTask */
 osThreadId_t IWDGRefreshTaskHandle;
 const osThreadAttr_t IWDGRefreshTask_attributes = {
-    .name = "IWDGRefreshTask",
-    .stack_size = 128 * 4,
-    .priority = (osPriority_t)osPriorityLow,
+  .name = "IWDGRefreshTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
 };
 /* Definitions for Usart2TxRxTask */
 osThreadId_t Usart2TxRxTaskHandle;
 const osThreadAttr_t Usart2TxRxTask_attributes = {
-    .name = "Usart2TxRxTask",
-    .stack_size = 256 * 4,
-    .priority = (osPriority_t)osPriorityLow,
+  .name = "Usart2TxRxTask",
+  .stack_size = 256 * 4,
+  .priority = (osPriority_t) osPriorityNormal,
 };
 /* Definitions for HoldRegTask */
 osThreadId_t HoldRegTaskHandle;
 const osThreadAttr_t HoldRegTask_attributes = {
-    .name = "HoldRegTask",
-    .stack_size = 256 * 4,
-    .priority = (osPriority_t)osPriorityNormal,
+  .name = "HoldRegTask",
+  .stack_size = 256 * 4,
+  .priority = (osPriority_t) osPriorityNormal1,
 };
 /* Definitions for ADC_Queue */
 osMessageQueueId_t ADC_QueueHandle;
 const osMessageQueueAttr_t ADC_Queue_attributes = {
-    .name = "ADC_Queue"};
+  .name = "ADC_Queue"
+};
 /* Definitions for U2Rx_Queue */
 osMessageQueueId_t U2Rx_QueueHandle;
 const osMessageQueueAttr_t U2Rx_Queue_attributes = {
-    .name = "U2Rx_Queue"};
+  .name = "U2Rx_Queue"
+};
 /* Definitions for ModbusOneReg_Queue */
 osMessageQueueId_t ModbusOneReg_QueueHandle;
 const osMessageQueueAttr_t ModbusOneReg_Queue_attributes = {
-    .name = "ModbusOneReg_Queue"};
+  .name = "ModbusOneReg_Queue"
+};
 /* Definitions for AnalogInputDataQueue */
 osMessageQueueId_t AnalogInputDataQueueHandle;
 const osMessageQueueAttr_t AnalogInputDataQueue_attributes = {
-    .name = "AnalogInputDataQueue"};
+  .name = "AnalogInputDataQueue"
+};
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -139,12 +143,11 @@ void HoldReg_Task(void *argument);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
 /**
- * @brief  FreeRTOS initialization
- * @param  None
- * @retval None
- */
-void MX_FREERTOS_Init(void)
-{
+  * @brief  FreeRTOS initialization
+  * @param  None
+  * @retval None
+  */
+void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN Init */
   BaseType_t err = pdFAIL;
   /* USER CODE END Init */
@@ -168,16 +171,16 @@ void MX_FREERTOS_Init(void)
 
   /* Create the queue(s) */
   /* creation of ADC_Queue */
-  ADC_QueueHandle = osMessageQueueNew(1, sizeof(ADC_Value), &ADC_Queue_attributes);
+  ADC_QueueHandle = osMessageQueueNew (1, sizeof(ADC_Value), &ADC_Queue_attributes);
 
   /* creation of U2Rx_Queue */
-  U2Rx_QueueHandle = osMessageQueueNew(16, sizeof(U2Rx_SBuff), &U2Rx_Queue_attributes);
+  U2Rx_QueueHandle = osMessageQueueNew (16, sizeof(U2Rx_SBuff), &U2Rx_Queue_attributes);
 
   /* creation of ModbusOneReg_Queue */
-  ModbusOneReg_QueueHandle = osMessageQueueNew(10, sizeof(ModbusOneReg_Struct), &ModbusOneReg_Queue_attributes);
+  ModbusOneReg_QueueHandle = osMessageQueueNew (10, sizeof(ModbusOneReg_Struct), &ModbusOneReg_Queue_attributes);
 
   /* creation of AnalogInputDataQueue */
-  AnalogInputDataQueueHandle = osMessageQueueNew(1, sizeof(AnalogData_Struct), &AnalogInputDataQueue_attributes);
+  AnalogInputDataQueueHandle = osMessageQueueNew (1, sizeof(AnalogData_Struct), &AnalogInputDataQueue_attributes);
 
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
@@ -216,6 +219,7 @@ void MX_FREERTOS_Init(void)
   /* USER CODE BEGIN RTOS_EVENTS */
   /* add events, ... */
   /* USER CODE END RTOS_EVENTS */
+
 }
 
 /* USER CODE BEGIN Header_StartDefaultTask */
@@ -368,7 +372,7 @@ void Usart2TxRx_Task(void *argument)
 
     Modbus_Analysis((uint8_t *)rx_sbuff.buf, (uint8_t)rx_sbuff.len); /* Modbus-RTU 数据解析 */
 
-    osDelay(10);
+    osDelay(1);
   }
   /* USER CODE END Usart2TxRx_Task */
 }
@@ -411,11 +415,10 @@ void HoldReg_Task(void *argument)
       xQueueReceive(AnalogInputDataQueueHandle, &analogData, portMAX_DELAY); /* 队列数据长度 AnalogData_Struct 结构体 */
 
       // printf("%d\r\n", analogData.data[0]);
-      for(uint8_t i =0;i<MODBUS_REG;i++)
+      for (uint8_t i = 0; i < MODBUS_REG; i++)
       {
         Modbus_Hold_Reg[i] = (uint16_t)analogData.data[i];
       }
-      
     }
 
     osDelay(1);
@@ -427,3 +430,4 @@ void HoldReg_Task(void *argument)
 /* USER CODE BEGIN Application */
 
 /* USER CODE END Application */
+

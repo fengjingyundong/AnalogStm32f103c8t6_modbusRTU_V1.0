@@ -1,6 +1,6 @@
 Dependencies for Project 'AnalogModbusRTU', Target 'AnalogModbusRTU': (DO NOT MODIFY !)
 CompilerVersion: 5060750::V5.06 update 6 (build 750)::.\ARMCC
-F (startup_stm32f103xb.s)(0x68103221)(--cpu Cortex-M3 -g --apcs=interwork -I ../Drivers/CMSIS/Include-I.\RTE\_AnalogModbusRTU-IC:\Users\wangp\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\wangp\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include--pd "__UVISION_VERSION SETA 538" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32f103xb.lst --xref -o analogmodbusrtu\startup_stm32f103xb.o --depend analogmodbusrtu\startup_stm32f103xb.d)
+F (startup_stm32f103xb.s)(0x68947C1D)(--cpu Cortex-M3 -g --apcs=interwork -I ../Drivers/CMSIS/Include-I.\RTE\_AnalogModbusRTU-IC:\Users\wangp\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\wangp\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include--pd "__UVISION_VERSION SETA 538" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32f103xb.lst --xref -o analogmodbusrtu\startup_stm32f103xb.o --depend analogmodbusrtu\startup_stm32f103xb.d)
 F (../Core/Src/main.c)(0x680F24CC)(--c99 -c --cpu Cortex-M3 -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/BSP/CRC -I ../Drivers/BSP/TLC2543 -I ../Drivers/BSP/MODBUS-I.\RTE\_AnalogModbusRTU-IC:\Users\wangp\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\wangp\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o analogmodbusrtu\main.o --omf_browse analogmodbusrtu\main.crf --depend analogmodbusrtu\main.d)
 I (../Core/Inc/main.h)(0x680DCCA8)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x674983CF)
@@ -47,7 +47,7 @@ I (../Core/Inc/dma.h)(0x680D870A)
 I (../Core/Inc/iwdg.h)(0x680F24C9)
 I (../Core/Inc/spi.h)(0x680D870A)
 I (../Core/Inc/tim.h)(0x680D9D0A)
-I (../Core/Inc/usart.h)(0x6810321F)
+I (../Core/Inc/usart.h)(0x68947C19)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Core/Inc/gpio.h)(0x680EF0F8)
 F (../Core/Src/gpio.c)(0x680EDE5B)(--c99 -c --cpu Cortex-M3 -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/BSP/CRC -I ../Drivers/BSP/TLC2543 -I ../Drivers/BSP/MODBUS-I.\RTE\_AnalogModbusRTU-IC:\Users\wangp\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\wangp\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o analogmodbusrtu\gpio.o --omf_browse analogmodbusrtu\gpio.crf --depend analogmodbusrtu\gpio.d)
@@ -82,7 +82,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h)(0x674983CF)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x674983CF)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x674983CF)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x674983CF)
-F (../Core/Src/freertos.c)(0x681038F3)(--c99 -c --cpu Cortex-M3 -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/BSP/CRC -I ../Drivers/BSP/TLC2543 -I ../Drivers/BSP/MODBUS-I.\RTE\_AnalogModbusRTU-IC:\Users\wangp\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\wangp\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o analogmodbusrtu\freertos.o --omf_browse analogmodbusrtu\freertos.crf --depend analogmodbusrtu\freertos.d)
+F (../Core/Src/freertos.c)(0x68947F07)(--c99 -c --cpu Cortex-M3 -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/BSP/CRC -I ../Drivers/BSP/TLC2543 -I ../Drivers/BSP/MODBUS-I.\RTE\_AnalogModbusRTU-IC:\Users\wangp\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\wangp\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o analogmodbusrtu\freertos.o --omf_browse analogmodbusrtu\freertos.crf --depend analogmodbusrtu\freertos.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x674983CF)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
@@ -125,7 +125,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x674983CF)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h)(0x674983CF)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h)(0x674983CF)
 I (../Core/Inc/gpio.h)(0x680EF0F8)
-I (../Core/Inc/usart.h)(0x6810321F)
+I (../Core/Inc/usart.h)(0x68947C19)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Core/Inc/tim.h)(0x680D9D0A)
 I (../Core/Inc/spi.h)(0x680D870A)
@@ -234,7 +234,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x674983CF)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x674983CF)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x674983CF)
 I (../Core/Inc/gpio.h)(0x680EF0F8)
-I (../Core/Inc/usart.h)(0x6810321F)
+I (../Core/Inc/usart.h)(0x68947C19)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Drivers/BSP/TLC2543/tlc2543.h)(0x68103883)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x674983CF)
@@ -286,7 +286,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x674983CF)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x674983CF)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x674983CF)
 F (../Core/Src/usart.c)(0x680F4E83)(--c99 -c --cpu Cortex-M3 -g -O1 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/BSP/CRC -I ../Drivers/BSP/TLC2543 -I ../Drivers/BSP/MODBUS-I.\RTE\_AnalogModbusRTU-IC:\Users\wangp\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\wangp\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o analogmodbusrtu\usart.o --omf_browse analogmodbusrtu\usart.crf --depend analogmodbusrtu\usart.d)
-I (../Core/Inc/usart.h)(0x6810321F)
+I (../Core/Inc/usart.h)(0x68947C19)
 I (../Core/Inc/main.h)(0x680DCCA8)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x674983CF)
 I (../Core/Inc/stm32f1xx_hal_conf.h)(0x680F24CC)
@@ -363,7 +363,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x674983CF)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x674983CF)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x674983CF)
 I (../Core/Inc/stm32f1xx_it.h)(0x680DE390)
-I (../Core/Inc/usart.h)(0x6810321F)
+I (../Core/Inc/usart.h)(0x68947C19)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Core/Inc/gpio.h)(0x680EF0F8)
 I (../Drivers/BSP/TLC2543/tlc2543.h)(0x68103883)
@@ -1190,7 +1190,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x674983CF)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x674983CF)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x674983CF)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599ECD2E)
-I (../Core/Inc/usart.h)(0x6810321F)
+I (../Core/Inc/usart.h)(0x68947C19)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Core/Inc/spi.h)(0x680D870A)
 I (../Core/Inc/tim.h)(0x680D9D0A)
@@ -1243,7 +1243,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x674983CF)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x674983CF)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x674983CF)
 I (../Drivers/BSP/CRC/crc.h)(0x680DA9C2)
-I (../Core/Inc/usart.h)(0x6810321F)
+I (../Core/Inc/usart.h)(0x68947C19)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h)(0x674983CF)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x674983CF)

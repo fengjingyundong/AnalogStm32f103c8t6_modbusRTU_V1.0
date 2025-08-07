@@ -1,0 +1,36 @@
+Change Component Comment : Designator=R40 Old Comment=1k New Comment=10R
+Added Component: Designator=U8(SO-8)
+Added Pin To Net: NetName=BOOT1 Pin=C54-2
+Added Pin To Net: NetName=VCC Pin=C55-1
+Added Pin To Net: NetName=BOOT1 Pin=C55-2
+Added Pin To Net: NetName=VCC Pin=R39-1
+Added Pin To Net: NetName=BOOT1 Pin=R40-1
+Added Pin To Net: NetName=BOOT1 Pin=U8-5
+Added Pin To Net: NetName=VCC Pin=U8-8
+Added Pin To Net: NetName=DAC0 Pin=R38-2
+Added Pin To Net: NetName=DAC0 Pin=U8-4
+Added Net: Name=DAC0
+Added Pin To Net: NetName=DACLK Pin=U1-25
+Added Pin To Net: NetName=DACLK Pin=U8-2
+Added Net: Name=DACLK
+Added Pin To Net: NetName=DACOUT0 Pin=C54-1
+Added Pin To Net: NetName=DACOUT0 Pin=J3-13
+Added Pin To Net: NetName=DACOUT0 Pin=R38-1
+Added Net: Name=DACOUT0
+Added Pin To Net: NetName=DACS Pin=U1-26
+Added Pin To Net: NetName=DACS Pin=U8-3
+Added Net: Name=DACS
+Added Pin To Net: NetName=DADI Pin=U1-27
+Added Pin To Net: NetName=DADI Pin=U8-1
+Added Net: Name=DADI
+Added Pin To Net: NetName=REF0 Pin=R39-2
+Added Pin To Net: NetName=REF0 Pin=R40-2
+Added Pin To Net: NetName=REF0 Pin=U8-6
+Added Net: Name=REF0
+Change Class Name : Old Net Name=STM32_ADC New Net Name=STM32_ADTDA
+Added Member To Class: ClassName=STM32_ADTDA Member=Component C54 0.1uF
+Added Member To Class: ClassName=STM32_ADTDA Member=Component C55 0.1uF
+Added Member To Class: ClassName=STM32_ADTDA Member=Component R38 10R
+Added Member To Class: ClassName=STM32_ADTDA Member=Component R39 2K
+Added Member To Class: ClassName=STM32_ADTDA Member=Component R40 1K
+Added Member To Class: ClassName=STM32_ADTDA Member=Component U8 TLV5617AI

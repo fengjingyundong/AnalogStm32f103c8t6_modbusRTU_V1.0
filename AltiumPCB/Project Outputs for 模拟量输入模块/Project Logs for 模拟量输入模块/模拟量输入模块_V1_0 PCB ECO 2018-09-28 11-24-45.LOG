@@ -1,0 +1,12 @@
+Added Component: Designator=D12(DIODE-0.3)
+Added Component: Designator=R31(axial0.3)
+Added Pin To Net: NetName=NetD5_2 Pin=D5-2
+Added Pin To Net: NetName=AGND Pin=D12-1
+Added Pin To Net: NetName=NetD12_2 Pin=D12-2
+Added Pin To Net: NetName=NetD5_2 Pin=R23-1
+Added Pin To Net: NetName=AGND Pin=R23-2
+Added Pin To Net: NetName=NetD7_2 Pin=R25-1
+Added Pin To Net: NetName=NetD13_2 Pin=R31-1
+Added Pin To Net: NetName=AGND Pin=R31-2
+Added Member To Class: ClassName=STM32_ADC Member=Component D13 1N5339B
+Added Member To Class: ClassName=STM32_ADC Member=Component R23 200R1ppm

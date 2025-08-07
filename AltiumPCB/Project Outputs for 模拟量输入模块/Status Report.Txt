@@ -1,0 +1,11 @@
+Output: Simple BOM
+Type  : SimpleBOM
+From  : Project [模拟量输入模块.PrjPCB]
+   Generated File[模拟量输入模块.BOM]
+   Generated File[模拟量输入模块.CSV]
+
+
+Files Generated   : 2
+Documents Printed : 0
+
+Finished Output Generation At 13:46:01 On 2020/2/26

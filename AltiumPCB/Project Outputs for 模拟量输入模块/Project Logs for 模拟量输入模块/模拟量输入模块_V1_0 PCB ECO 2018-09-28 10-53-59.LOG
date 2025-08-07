@@ -1,0 +1,40 @@
+Change Component Designator: OldDesignator=D4 NewDesignator=D5
+Change Component Designator: OldDesignator=R22 NewDesignator=R25
+Added Component: Designator=D13(DIODE-0.3)
+Added Component: Designator=R31(axial0.3)
+Added Pin To Net: NetName=AGND Pin=D5-1
+Added Pin To Net: NetName=NetD5_2 Pin=D5-2
+Added Pin To Net: NetName=AGND Pin=D6-1
+Added Pin To Net: NetName=NetD6_2 Pin=D6-2
+Added Pin To Net: NetName=AGND Pin=D7-1
+Added Pin To Net: NetName=NetD7_2 Pin=D7-2
+Added Pin To Net: NetName=AGND Pin=D8-1
+Added Pin To Net: NetName=NetD8_2 Pin=D8-2
+Added Pin To Net: NetName=AGND Pin=D9-1
+Added Pin To Net: NetName=NetD9_2 Pin=D9-2
+Added Pin To Net: NetName=AGND Pin=D10-1
+Added Pin To Net: NetName=NetD10_2 Pin=D10-2
+Added Pin To Net: NetName=AGND Pin=D11-1
+Added Pin To Net: NetName=NetD11_2 Pin=D11-2
+Added Pin To Net: NetName=AGND Pin=D12-1
+Added Pin To Net: NetName=NetD12_2 Pin=D12-2
+Added Pin To Net: NetName=AGND Pin=D13-1
+Added Pin To Net: NetName=NetD13_2 Pin=D13-2
+Added Pin To Net: NetName=NetD5_2 Pin=R23-1
+Added Pin To Net: NetName=AGND Pin=R23-2
+Added Pin To Net: NetName=NetD6_2 Pin=R24-1
+Added Pin To Net: NetName=AGND Pin=R24-2
+Added Pin To Net: NetName=NetD7_2 Pin=R25-1
+Added Pin To Net: NetName=AGND Pin=R25-2
+Added Pin To Net: NetName=NetD8_2 Pin=R26-1
+Added Pin To Net: NetName=AGND Pin=R26-2
+Added Pin To Net: NetName=NetD9_2 Pin=R27-1
+Added Pin To Net: NetName=AGND Pin=R27-2
+Added Pin To Net: NetName=NetD10_2 Pin=R28-1
+Added Pin To Net: NetName=AGND Pin=R28-2
+Added Pin To Net: NetName=NetD11_2 Pin=R29-1
+Added Pin To Net: NetName=AGND Pin=R29-2
+Added Pin To Net: NetName=NetD12_2 Pin=R30-1
+Added Pin To Net: NetName=AGND Pin=R30-2
+Added Pin To Net: NetName=NetD13_2 Pin=R31-1
+Added Pin To Net: NetName=AGND Pin=R31-2
